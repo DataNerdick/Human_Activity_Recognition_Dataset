@@ -37,9 +37,10 @@ names(testSubject) <- "volunteer"
 
 testDF <- cbind(testSubject, testLabels, test)
 
+![image](https://user-images.githubusercontent.com/16624729/44635962-d11a1400-a95d-11e8-9fc5-ad2f63364cb3.png)
+```
 
-
-
+```R
 #make train data frame
 train <- read.table(unz(temp, "UCI HAR Dataset/train/X_train.txt"))
 colnames(train) <- justFeatures
@@ -49,12 +50,17 @@ trainSubject <- read.table(unz(temp, "UCI HAR Dataset/train/subject_train.txt"))
 names(trainSubject) <- "volunteer"
 
 trainDF <- cbind(trainSubject, trainLabels, train)
-
 unlink(temp)
+```
+![image](https://user-images.githubusercontent.com/16624729/44636013-0e7ea180-a95e-11e8-89d6-1fdab971938d.png)
 
+
+```R
 #create final data frame
 theDF <- rbind(testDF, trainDF)
 ```
+![image](https://user-images.githubusercontent.com/16624729/44636041-2d7d3380-a95e-11e8-85de-c2a46f6a069c.png)
+
 
 The second step was to extract only the measurements on the mean and std
 ```R
