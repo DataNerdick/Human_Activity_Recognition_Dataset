@@ -36,9 +36,10 @@ testSubject <- read.table(unz(temp, "UCI HAR Dataset/test/subject_test.txt"))
 names(testSubject) <- "volunteer"
 
 testDF <- cbind(testSubject, testLabels, test)
+```
 
 ![image](https://user-images.githubusercontent.com/16624729/44635962-d11a1400-a95d-11e8-9fc5-ad2f63364cb3.png)
-```
+
 
 ```R
 #make train data frame
@@ -78,5 +79,30 @@ result$activity <- plyr::mapvalues(theData$activity, from = c(1, 2, 3, 4, 5, 6),
                           to = c("walking", "walking_upstairs", "walking_downstairs", "sitting", "standing", "laying"))
 ```
 
-The fource step included changing 
+The fourth step included changing the variables names to insure readibility.
+```R
+names(theData) <- gsub("\\()", "", names(theData))
+names(theData) <- gsub("-", "", names(theData))
+names(theData) <- gsub("^t", "time", names(theData))
+names(theData) <- gsub("^f", "frequency", names(theData))
+names(theData) <- gsub("Acc", "Accelerometer", names(theData))
+names(theData) <- gsub("Gyro", "Gyroscope", names(theData))
+names(theData) <- gsub("Mag", "Magnitude", names(theData))
+names(theData) <- gsub("meanFreq", "meanfrequency", names(theData))
+```
+![image](https://user-images.githubusercontent.com/16624729/44636371-4686e400-a960-11e8-91b2-0cae477d803f.png)
+
+The final step included grouping the data by volunteer and activity and calculating the average for each variable
+which insured that there is one observation per row to satisfy tidy data princuple.
+
+```R
+theDataMean <- aggregate(theData[, 3:81], list(theData$volunteer, theData$activity), mean)
+names(theDataMean) <- names(theData)
+```
+
+![image](https://user-images.githubusercontent.com/16624729/44636482-dcbb0a00-a960-11e8-992c-c2bc6e785e55.png)
+
+
+
+
 
