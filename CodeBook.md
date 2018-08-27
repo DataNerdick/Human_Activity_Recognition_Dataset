@@ -1,4 +1,5 @@
-#Human Activity Recognition Using Smartphones Data Set
+Human Activity Recognition Using Smartphones Data Set
+=====================================================
 
 
 *Abstract*: Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
@@ -13,7 +14,8 @@
 **Date Donated:**                2012-12-10  
 **Number of Web Hits**           684134     
 
-###Raw Data Source:
+Raw Data Source:
+-----------------
 Jorge L. Reyes-Ortiz(1,2), Davide Anguita(1), Alessandro Ghio(1), Luca Oneto(1) and Xavier Parra(2)
 1 - Smartlab - Non-Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy. 
@@ -21,7 +23,8 @@ DITEN - Università degli Studi di Genova, Genoa (I-16145), Italy. 
 Universitat Politècnica de Catalunya (BarcelonaTech). Vilanova i la Geltrú (08800), Spain
 activityrecognition '@' smartlab.ws
 
-###Raw Data Set Information:
+Raw Data Set Information:
+-------------------------
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
 wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 
@@ -35,7 +38,8 @@ acceleration and gravity. The gravitational force is assumed to have only low fr
 filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating 
 variables from the time and frequency domain.
 
-###Attribute Information:
+Attribute Information:
+----------------------
 For each record in the dataset it is provided: 
 * Triaxial acceleration from the accelerometer (total acceleration) 
 and the estimated body acceleration. 
@@ -44,7 +48,8 @@ and the estimated body acceleration. 
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-###Work Performed to Clean the Raw Data Set
+Work Performed to Clean the Raw Data Set:
+-----------------------------------------
 1. The test and training sets as well as test and training subjects and labels were merged to create one data frame
 2. Only the measurements on the mean and standard deviation were extracted from the raw data frame into the final data table
 3. The variables in the data table were named based on the features provided with the raw dataset with minor name corrections for readability
