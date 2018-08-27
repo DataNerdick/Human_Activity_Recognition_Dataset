@@ -103,6 +103,10 @@ names(theDataMean) <- names(theData)
 ![image](https://user-images.githubusercontent.com/16624729/44636482-dcbb0a00-a960-11e8-992c-c2bc6e785e55.png)
 
 
+# tidyData.csv is a tidy data set because:
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Variable names are descriptive.
 
 
 
