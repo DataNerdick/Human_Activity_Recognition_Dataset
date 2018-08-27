@@ -9,7 +9,7 @@ Human Activity Recognition Using Smartphones Data Set
 **Associated Tasks:**            Classification, Clustering    
 **Number of Instances:**         10299   
 **Number of Attributes:**        561
-**Missing Values?                N/A
+**Missing Values?**              N/A
 **Area:**                        Computer     
 **Date Donated:**                2012-12-10  
 **Number of Web Hits**           684134     
