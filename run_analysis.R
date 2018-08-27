@@ -59,7 +59,7 @@ names(theData) <- gsub("meanFreq", "meanfrequency", names(theData))
 theDataMean <- aggregate(theData[, 3:81], list(theData$volunteer, theData$activity), mean)
 names(theDataMean) <- names(theData)
 
-#6.
+#6. Write the Tidy Data set into .csv and .txt file
 write.csv(theDataMean, file = "tidyData.csv", row.names = FALSE)
 write.table(theDataMean, file = "tidyData.txt", row.names = FALSE)
 
